@@ -10,8 +10,12 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
+  showMyInfoChecker = false;
+  showServices = false;
+
   title = 'The best Youtuber';
   name = 'Emo';
+  myInfo = { name: 'Emo', age: 22 };
   hobbies = ['Четене на книги', 'Бягане', 'Колоездене'];
   favoriteContentCreator = {
     name: 'PewDiePie',
@@ -36,4 +40,12 @@ export class AppComponent {
       price: 350,
     },
   ];
+
+  toggleMyInfo() {
+    this.showMyInfoChecker = !this.showMyInfoChecker;
+  }
+
+  toggleMyServices() {
+    this.showServices = !this.showServices;
+  }
 }
